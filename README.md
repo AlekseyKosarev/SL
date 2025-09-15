@@ -9,8 +9,4 @@ public class EntryPoint
         //and etc
     }
 }
-
-
-Requirements:
-DS.Models - for type Result<T>
 ```
