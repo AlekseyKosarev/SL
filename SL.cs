@@ -6,7 +6,6 @@ namespace SL
     public static class SL
     {
         private static readonly Dictionary<Type, object> Services = new();
-        private static readonly HashSet<Type> Initialized = new();
 
         public static void Register<T>(T service) where T : class
         {
@@ -25,12 +24,10 @@ namespace SL
         }
 
         public static bool Contains<T>() => Services.ContainsKey(typeof(T));
-        public static bool IsInitialized<T>() => Initialized.Contains(typeof(T));
 
         public static void Clear()
         {
             Services.Clear();
-            Initialized.Clear();
         }
     }
 }
